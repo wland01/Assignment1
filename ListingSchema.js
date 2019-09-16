@@ -4,8 +4,8 @@ var mongoose = require('mongoose'),
 
 /* Create your schema for the data in the listings.json file that will define how data is saved in your database */
 var listingSchema = new Schema({
-  code: String, 
-  name: String, 
+  code: { type: String, required: true }, 
+  name: { type: String, required: true }, 
   coordinates: { latitude: Number, longitude: Number }, 
   address: String,
   created_at: Date,
